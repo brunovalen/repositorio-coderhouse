@@ -1,0 +1,64 @@
+header{
+    text-align: center;
+    animation-duration: 1.5s;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+    margin-right: 45px;
+    margin-left: 45px;
+    margin-top: 20px;
+    grid-area: logo;
+    h1{
+        nav{
+            grid-area: nav;
+            .menu{
+                padding: 30px;
+                list-style: none;
+                width: 90%;
+                margin: 20px auto;
+                text-align: center;
+                animation-duration: 3s;
+                animation-name: aparecer;
+                animation-iteration-count: initial;
+                li{
+                    display: inline-block;
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        font-size: 200%;
+                        display: inline;
+                        padding: 20px;
+                        color: $font_clara;
+                        &:hover{
+                            text-decoration: $font_clara;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0; 
+    }
+    50%{
+        opacity: 0.1;
+    }
+    65%{
+        opacity: 0.2;
+    }
+    75%{
+        opacity: 0.3;
+    }
+    80%{
+        opacity: 0.4;
+    }
+    85%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}

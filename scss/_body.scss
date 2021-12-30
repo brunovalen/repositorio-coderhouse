@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient(to bottom, pink,purple);
+    font-family: 'Outfit', sans-serif;
+    .grilla{
+        display: grid;
+        grid-template-areas: 
+        "logo logo logo"
+        "nav nav nav"
+        "subtitulo subtitulo subtitulo"
+        "descripcion descripcion descripcion"
+        "tienda tienda tienda"
+        "seccionimg seccionimg seccionimg"
+        "seccionimg seccionimg seccionimg"
+        "seccionimg seccionimg seccionimg"
+        "seccionimg seccionimg seccionimg"
+        "mas mas mas"
+        "footer footer footer";
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        height: auto;
+        margin: 0;
+        justify-items: center;
+    }
+    .grillaproductos{
+        display: grid;
+        grid-template-areas: 
+        "logo logo logo"
+        "nav nav nav"
+        "wrap wrap wrap"
+        "categoriadelproducto productoitem productoitem"
+        "categoriadelproducto productoitem productoitem"
+        "categoriadelproducto productoitem productoitem"
+        "categoriadelproducto productoitem productoitem"
+        "categoriadelproducto productoitem productoitem"
+        "categoriadelproducto productoitem productoitem"
+        "footer footer footer";
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        height: auto;
+        margin: 0;
+        justify-items: center;
+    }
+}
