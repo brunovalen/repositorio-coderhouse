@@ -4,7 +4,7 @@ main{
             text-align: center;
             font-size: 150%;
             text-decoration: wavy;
-            color: $font_oscura;
+            color: $oscura;
             margin-left: 45px;
             margin-right: 45px;
             margin-bottom: 45px;
@@ -18,7 +18,7 @@ main{
     section{
         h2{
             text-align: center;
-            color: $font_clara;
+            color: $clara;
             animation-duration: 3s;
             animation-name: aparecer;
             animation-iteration-count: initial;
@@ -30,7 +30,7 @@ main{
             
         h3{
             text-align: center;
-            color: $font_clara;
+            color: $clara;
             animation-duration: 3s;
             animation-name: aparecer;
             animation-iteration-count: initial;
@@ -43,7 +43,7 @@ main{
             text-align: center;
             font-size: 150%;
             text-decoration: wavy;
-            color: $font_oscura;
+            color: $oscura;
             margin-left: 45px;
             margin-right: 45px;
             margin-bottom: 45px;
@@ -59,12 +59,10 @@ main{
         div.wrap{
             width: 90%;
             margin: auto;
-            animation-duration: 4.5s;
-            animation-name: aparecer;
-            animation-iteration-count: initial;
+            @include animation ($cuatrov2);
             grid-area: wrap;
             h1{
-                color: $font_gris;
+                color: $gris;
                 font-weight: 400;
                 display: flex;
                 flex-direction: column;
@@ -72,20 +70,63 @@ main{
             }
             div.tiendadeproductos{
                 display: flex;
-                div{
+                .caja{
                     display: flex;
                     flex-direction: column;
                     width: 25%;
-                    a{
-                        width: 90%;
-                        padding: 15px 0;
-                        margin-bottom: 20px;
-                        margin-left: 5px;
-                        background: $bg_oscuro;
-                        grid-area: categoriadelproducto;
-                        text-align: center;
-                        text-decoration: none;
-                        color: $font_clara;
+                    .cajaroja{
+                        @extend .caja;
+                        @include cajas ($rojo, $clara);
+                        &:hover{
+                            text-decoration: underline $clara;
+                            font-size: 30px;
+                            font-weight: bolder;
+                            }   
+                        }
+                    .cajanegra{
+                        @extend .caja;
+                        @include cajas ($negra, $clara);
+                        &:hover{
+                            text-decoration: underline $clara;
+                            font-size: 30px;
+                            font-weight: bolder;
+                        }
+                    }
+                    .cajablanca{
+                        @extend .caja;
+                        @include cajas ($blanca, $oscuro);
+                        &:hover{
+                            text-decoration: underline $oscuro;
+                            font-size: 30px;
+                            font-weight: bolder;
+                        }
+                    }
+                    .cajavioleta{
+                        @extend .caja;
+                        @include cajas ($violeta, $clara);
+                        &:hover{
+                            text-decoration: underline $clara;
+                            font-size: 30px;
+                            font-weight: bolder;
+                        }
+                    }
+                    .cajarosa{
+                        @extend .caja;
+                        @include cajas ($rosa, $clara);
+                        &:hover{
+                            text-decoration: underline $clara;
+                            font-size: 30px;
+                            font-weight: bolder;
+                        }
+                    }
+                    .cajaamarilla{
+                        @extend .caja;
+                        @include cajas ($amarilla, $oscuro);
+                        &:hover{
+                            text-decoration: underline $oscuro;
+                            font-size: 30px;
+                        font-weight: bolder;
+                    }
                     }
                 }
                 section{
@@ -105,8 +146,8 @@ main{
                             display: block;
                             width: 100%;
                             padding: 8px 0;
-                            background: $bg_oscuro;
-                            color: $font_clara;
+                            background: $oscuro;
+                            color: $clara;
                             text-align: center;
                             text-decoration: none;
                         }
@@ -119,16 +160,14 @@ main{
     ol.tienda{
         text-align: center;
         margin-bottom: 20px;    
-        animation-duration: 4s;
-        animation-name: aparecer;
-        animation-iteration-count: initial;
+        @include animation ($cuatro);
         grid-area: tienda;
         li{
             a{
             text-decoration: none;
-            color: $font_clara;
+            color: $clara;
             &:hover{
-                text-decoration: underline $font_clara;
+                text-decoration: underline $clara;
                 font-size: 20px;
                 font-weight: bolder;
                 transform: scale(1.2,1.2);
@@ -148,24 +187,20 @@ main{
                 height: 250px;
                 opacity: 4;
                 border: 2px double $borde_gris;
-                animation-duration: 4.5s;
-                animation-name: aparecer;
-                animation-iteration-count: initial;
+                @include animation ($cuatrov2);
                 &:hover{
                     opacity: 1;
-                    border: solid $font_clara 2px;
+                    border: solid $clara 2px;
                     transform: scale(1.1,1.1)
                     }
                 }
             p.descripcionDeProductos{
-            color: $font_clara;
-            text-decoration: underline $font_clara;
+            color: $clara;
+            text-decoration: underline $clara;
             list-style: none;
             margin-top: 20px;
             margin-bottom: 20px;
-            animation-duration: 4.5s;
-            animation-name: aparecer;
-            animation-iteration-count: initial;
+            @include animation ($cuatrov2);
             text-align: center;
                 }
             }
@@ -176,15 +211,16 @@ main{
         li{
             a{
                 text-decoration: none;
-                color: $font_clara;
+                color: $clara;
                 &:hover{
-                    text-decoration: underline $font_clara;
+                    text-decoration: underline $clara;
                     font-size: 20px;
                     font-weight: bolder;
                     transform: scale(1.5,1.5);
                     }
                 }
             }
+        
         }
     }
     

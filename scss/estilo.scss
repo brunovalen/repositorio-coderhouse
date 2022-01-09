@@ -1,8 +1,55 @@
-$font_clara: #f8f6f6;
-$font_gris: #d8bfd8;
-$font_oscura:#f5deb3;
+$fonts:(
+    clara:#f8f6f6,
+    gris:#d8bfd8,
+    oscura:#f5deb3,
+);
+$clara: map-get($fonts,clara);
+$gris: map-get($fonts,gris);
+$oscura: map-get($fonts,oscura);
 $borde_gris: #949494;
-$bg_oscuro: #2d3e50;
+$bg:(
+    rojo: #ff0000,
+    negra: #000000,
+    blanca: #ffffff,
+    violeta: #ee82ee,
+    rosa: #ffc2cc,
+    amarilla: #ffff00,
+    oscuro: #2d3e50,
+);
+$rojo: map-get($bg,rojo);
+$negra: map-get($bg,negra);
+$blanca: map-get($bg,blanca);
+$violeta: map-get($bg,violeta);
+$rosa: map-get($bg,rosa);
+$oscuro: map-get($bg,oscuro);
+$amarilla: map-get($bg,amarilla);
+@mixin cajas ($bgcaja, $color) {
+    width: 90%;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    background: $bgcaja;
+    grid-area: categoriadelproducto;
+    text-align: center;
+    text-decoration: none;
+    color: $color;
+}
+$duracion:(
+    uno: 1.5,
+    tres: 3s,
+    cuatro: 4s,
+    cautrov2: 4.5s,
+);
+$uno: map-get($duracion,uno);
+$tres: map-get($duracion,tres);
+$cuatro: map-get($duracion,cuatro);
+$cuatrov2: map-get($duracion,cautrov2);
+
+@mixin animation ($duracion) {
+    animation-duration: $duracion;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+};
 @import "body";
 @import "main";
 @import "header";

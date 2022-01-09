@@ -1,12 +1,9 @@
+
 header{
-    text-align: center;
-    animation-duration: 1.5s;
-    animation-name: aparecer;
-    animation-iteration-count: initial;
-    margin-right: 45px;
-    margin-left: 45px;
-    margin-top: 20px;
-    grid-area: logo;
+        text-align: center;
+        @include animation ($uno);
+        grid-area: logo;
+        align-items: center;
     h1{
         nav{
             grid-area: nav;
@@ -16,9 +13,7 @@ header{
                 width: 90%;
                 margin: 20px auto;
                 text-align: center;
-                animation-duration: 3s;
-                animation-name: aparecer;
-                animation-iteration-count: initial;
+                @include animation ($tres);
                 li{
                     display: inline-block;
                     text-align: center;
@@ -27,9 +22,9 @@ header{
                         font-size: 200%;
                         display: inline;
                         padding: 20px;
-                        color: $font_clara;
+                        color: $clara;
                         &:hover{
-                            text-decoration: $font_clara;
+                            text-decoration: $clara;
                             font-weight: bold;
                         }
                     }

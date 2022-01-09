@@ -88,20 +88,94 @@ main section div.wrap {
     text-align: center; }
   main section div.wrap div.tiendadeproductos {
     display: flex; }
-    main section div.wrap div.tiendadeproductos div {
+    main section div.wrap div.tiendadeproductos .caja, main section div.wrap div.tiendadeproductos .caja .cajaroja, main section div.wrap div.tiendadeproductos .caja .cajanegra, main section div.wrap div.tiendadeproductos .caja .cajablanca, main section div.wrap div.tiendadeproductos .caja .cajavioleta, main section div.wrap div.tiendadeproductos .caja .cajarosa, main section div.wrap div.tiendadeproductos .caja .cajaamarilla {
       display: flex;
       flex-direction: column;
       width: 25%; }
-      main section div.wrap div.tiendadeproductos div a {
+      main section div.wrap div.tiendadeproductos .caja .cajaroja {
         width: 90%;
         padding: 15px 0;
         margin-bottom: 20px;
         margin-left: 5px;
-        background: #2d3e50;
+        background: #ff0000;
         grid-area: categoriadelproducto;
         text-align: center;
         text-decoration: none;
         color: #f8f6f6; }
+        main section div.wrap div.tiendadeproductos .caja .cajaroja:hover {
+          text-decoration: underline #f8f6f6;
+          font-size: 30px;
+          font-weight: bolder; }
+      main section div.wrap div.tiendadeproductos .caja .cajanegra {
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        background: #000000;
+        grid-area: categoriadelproducto;
+        text-align: center;
+        text-decoration: none;
+        color: #f8f6f6; }
+        main section div.wrap div.tiendadeproductos .caja .cajanegra:hover {
+          text-decoration: underline #f8f6f6;
+          font-size: 30px;
+          font-weight: bolder; }
+      main section div.wrap div.tiendadeproductos .caja .cajablanca {
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        background: #ffffff;
+        grid-area: categoriadelproducto;
+        text-align: center;
+        text-decoration: none;
+        color: #2d3e50; }
+        main section div.wrap div.tiendadeproductos .caja .cajablanca:hover {
+          text-decoration: underline #2d3e50;
+          font-size: 30px;
+          font-weight: bolder; }
+      main section div.wrap div.tiendadeproductos .caja .cajavioleta {
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        background: #ee82ee;
+        grid-area: categoriadelproducto;
+        text-align: center;
+        text-decoration: none;
+        color: #f8f6f6; }
+        main section div.wrap div.tiendadeproductos .caja .cajavioleta:hover {
+          text-decoration: underline #f8f6f6;
+          font-size: 30px;
+          font-weight: bolder; }
+      main section div.wrap div.tiendadeproductos .caja .cajarosa {
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        background: #ffc2cc;
+        grid-area: categoriadelproducto;
+        text-align: center;
+        text-decoration: none;
+        color: #f8f6f6; }
+        main section div.wrap div.tiendadeproductos .caja .cajarosa:hover {
+          text-decoration: underline #f8f6f6;
+          font-size: 30px;
+          font-weight: bolder; }
+      main section div.wrap div.tiendadeproductos .caja .cajaamarilla {
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        background: #ffff00;
+        grid-area: categoriadelproducto;
+        text-align: center;
+        text-decoration: none;
+        color: #2d3e50; }
+        main section div.wrap div.tiendadeproductos .caja .cajaamarilla:hover {
+          text-decoration: underline #2d3e50;
+          font-size: 30px;
+          font-weight: bolder; }
     main section div.wrap div.tiendadeproductos section {
       width: 90%;
       display: flex;
@@ -199,13 +273,11 @@ main ol.mas {
 
 header {
   text-align: center;
-  animation-duration: 1.5s;
+  animation-duration: 1.5;
   animation-name: aparecer;
   animation-iteration-count: initial;
-  margin-right: 45px;
-  margin-left: 45px;
-  margin-top: 20px;
-  grid-area: logo; }
+  grid-area: logo;
+  align-items: center; }
   header h1 nav {
     grid-area: nav; }
     header h1 nav .menu {
@@ -251,7 +323,7 @@ footer p {
   text-decoration: wavy;
   color: #d8bfd8; }
 
-footer h1 ol.menu {
+footer ol.menu {
   padding: 30px;
   list-style: none;
   width: 90%;
@@ -263,17 +335,17 @@ footer h1 ol.menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
-  footer h1 ol.menu li {
+  footer ol.menu li {
     display: inline-block;
     text-align: center; }
-    footer h1 ol.menu li a {
+    footer ol.menu li a {
       text-decoration: none;
       font-size: 200%;
       display: inline;
       padding: 20px;
       color: #f8f6f6; }
-      footer h1 ol.menu li a:hover {
-        text-decoration: v #f8f6f6;
+      footer ol.menu li a:hover {
+        text-decoration: underline #f8f6f6;
         font-weight: bold; }
 
 @keyframes aparecer {
