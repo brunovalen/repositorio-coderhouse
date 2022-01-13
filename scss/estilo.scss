@@ -79,7 +79,7 @@
         padding: 0;
         width: 40%;
         font-size: 4em;
-        border-bottom: 2px solid #999;
+        border-bottom: 2px solid $gris;
     }
     .container-slider{
         max-width: none;
@@ -128,14 +128,14 @@
         margin-left: 0;
     }
     .menu__link{
-        color: #333;
+        color: $gris;
         margin: 0;
     }
     .main-header__input{
         width: 60%;
     }
     .menu__link:hover{
-        color: black;
+        color: $negra;
         font-weight: bold;
     }
     .call{
