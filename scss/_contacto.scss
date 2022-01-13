@@ -1,0 +1,70 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image:  url(../imagenes/fondo3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width:  90%;
+    max-width: 600px;
+}
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+    z-index: +5;
+}
+.input-group i{
+    color: $tomate;
+}
+.text{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    background: $gris;
+    color: $clara;
+    font-size: 20px;
+    font-weight: bold;
+    border: 4px solid $negra;
+
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: $clara;
+    cursor: text;
+    font-family: "poppins";
+    font-weight: bold;
+    transition: 0.2s;
+}
+button{
+    padding: 10px 0;
+    color: $clara;
+    font-family: "poppins";
+    font-weight: bold;
+    outline: none;
+    background:  $gris;
+    border: 4px solid $negra;
+    width: 100%;
+    cursor: pointer;
+}
+.text:focus~label,
+.text:valid~label{
+    top: -35px;
+    font-size: 14px;
+
+}
+.bg{
+    color: $negra;
+}
+.espacio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

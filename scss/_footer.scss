@@ -1,57 +1,21 @@
 footer{
-    p{
-        text-align: center;
-        text-decoration: wavy;
-        color: $gris;
-    }
-    ol.menu{
-            padding: 30px;
-            list-style: none;
-            width: 90%;
-            margin: 20px auto;
-            text-align: center;
-            @include animation ($tres);
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            li{
-                display: inline-block;
-                text-align: center;
-                a{ 
-                    text-decoration: none;
-                    font-size: 200%;
-                    display: inline;
-                    padding: 20px;
-                    color: $clara;
-                    &:hover{
-                    text-decoration: underline $clara;
-                    font-weight: bold;
-                        }
-                    }
-                }
-    }
-    }
+    color: $clara;
+    background: $negrav2;
+    padding: 30px 20px;
+    div{
+        
+        p{
+            color: $gris;
+            margin: 15px;
 
-    @keyframes aparecer {
-        0%{
-            opacity: 0; 
         }
-        50%{
-            opacity: 0.1;
+        div{
+            text-align: center;
+            color: $naranja;
         }
-        65%{
-            opacity: 0.2;
+        h3{
+            color: $tomate;
+            margin: 10px;
         }
-        75%{
-            opacity: 0.3;
-        }
-        80%{
-            opacity: 0.4;
-        }
-        85%{
-            opacity: 0.5;
-        }
-        100%{
-            opacity: 1;
-        }
-}
+    }
+    }

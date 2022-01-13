@@ -1,249 +1,92 @@
-main{
-    form{
-        fieldset{
-            text-align: center;
-            font-size: 150%;
-            text-decoration: wavy;
-            color: $oscura;
-            margin-left: 45px;
-            margin-right: 45px;
-            margin-bottom: 45px;
-            margin-top: 30px;
-            animation-duration: 4s;
-            animation-name: aparecer;
-            animation-iteration-count: initial;
-            grid-area: descripcion
-        }
-    }
-    section{
-        h2{
-            text-align: center;
-            color: $clara;
-            animation-duration: 3s;
-            animation-name: aparecer;
-            animation-iteration-count: initial;
-            grid-area: subtitulo;
-            &:hover{
-                transform: scale(1.1,1.1);
-                }
-                }
-            
-        h3{
-            text-align: center;
-            color: $clara;
-            animation-duration: 3s;
-            animation-name: aparecer;
-            animation-iteration-count: initial;
-            grid-area: subtitulo;
-            &:hover{
-                transform: scale(1.1,1.1);
-                }
-            }
-        p{
-            text-align: center;
-            font-size: 150%;
-            text-decoration: wavy;
-            color: $oscura;
-            margin-left: 45px;
-            margin-right: 45px;
-            margin-bottom: 45px;
-            margin-top: 30px;
-            animation-duration: 4s;
-            animation-name: aparecer;
-            animation-iteration-count: initial;
-            grid-area: descripcion;
-            &:hover{
-                transform: scale(1.05,1.05);
-            }
-        }
-        div.wrap{
-            width: 90%;
-            margin: auto;
-            @include animation ($cuatrov2);
-            grid-area: wrap;
-            h1{
-                color: $gris;
-                font-weight: 400;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-            }
-            div.tiendadeproductos{
-                display: flex;
-                .caja{
-                    display: flex;
-                    flex-direction: column;
-                    width: 25%;
-                    .cajaroja{
-                        @extend .caja;
-                        @include cajas ($rojo, $clara);
-                        &:hover{
-                            text-decoration: underline $clara;
-                            font-size: 30px;
-                            font-weight: bolder;
-                            }   
-                        }
-                    .cajanegra{
-                        @extend .caja;
-                        @include cajas ($negra, $clara);
-                        &:hover{
-                            text-decoration: underline $clara;
-                            font-size: 30px;
-                            font-weight: bolder;
-                        }
-                    }
-                    .cajablanca{
-                        @extend .caja;
-                        @include cajas ($blanca, $oscuro);
-                        &:hover{
-                            text-decoration: underline $oscuro;
-                            font-size: 30px;
-                            font-weight: bolder;
-                        }
-                    }
-                    .cajavioleta{
-                        @extend .caja;
-                        @include cajas ($violeta, $clara);
-                        &:hover{
-                            text-decoration: underline $clara;
-                            font-size: 30px;
-                            font-weight: bolder;
-                        }
-                    }
-                    .cajarosa{
-                        @extend .caja;
-                        @include cajas ($rosa, $clara);
-                        &:hover{
-                            text-decoration: underline $clara;
-                            font-size: 30px;
-                            font-weight: bolder;
-                        }
-                    }
-                    .cajaamarilla{
-                        @extend .caja;
-                        @include cajas ($amarilla, $oscuro);
-                        &:hover{
-                            text-decoration: underline $oscuro;
-                            font-size: 30px;
-                        font-weight: bolder;
-                    }
-                    }
-                }
-                section{
-                    width: 90%;
-                    display: flex;
-                    flex-wrap: wrap;
-                    div{
-                        width: auto;
-                        margin-left: 3%;
-                        margin-bottom: 25px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        align-self: flex-start;
-                        grid-area: productoitem;
-                        a{
-                            display: block;
-                            width: 100%;
-                            padding: 8px 0;
-                            background: $oscuro;
-                            color: $clara;
-                            text-align: center;
-                            text-decoration: none;
-                        }
-                    }
-                }
-                }
-            }
-        }
-    
-    ol.tienda{
-        text-align: center;
-        margin-bottom: 20px;    
-        @include animation ($cuatro);
-        grid-area: tienda;
-        li{
-            a{
-            text-decoration: none;
-            color: $clara;
-            &:hover{
-                text-decoration: underline $clara;
-                font-size: 20px;
-                font-weight: bolder;
-                transform: scale(1.2,1.2);
-                }
-            }
-        }
-    }
-    section.seccionimg{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        grid-area: seccionimg;
-        div{
-            img.imagen{
-                width: 350px;
-                height: 250px;
-                opacity: 4;
-                border: 2px double $borde_gris;
-                @include animation ($cuatrov2);
-                &:hover{
-                    opacity: 1;
-                    border: solid $clara 2px;
-                    transform: scale(1.1,1.1)
-                    }
-                }
-            p.descripcionDeProductos{
-            color: $clara;
-            text-decoration: underline $clara;
-            list-style: none;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            @include animation ($cuatrov2);
-            text-align: center;
-                }
-            }
-    }
-    ol.mas{
-        text-align: center;
-        grid-area: mas;
-        li{
-            a{
-                text-decoration: none;
-                color: $clara;
-                &:hover{
-                    text-decoration: underline $clara;
-                    font-size: 20px;
-                    font-weight: bolder;
-                    transform: scale(1.5,1.5);
-                    }
-                }
-            }
-        
-        }
-    }
-    
-    @keyframes aparecer {
-        0%{
-            opacity: 0; 
-        }
-        50%{
-            opacity: 0.1;
-        }
-        65%{
-            opacity: 0.2;
-        }
-        75%{
-            opacity: 0.3;
-        }
-        80%{
-            opacity: 0.4;
-        }
-        85%{
-            opacity: 0.5;
-        }
-        100%{
-            opacity: 1;
-        }
+.main-title{
+    text-align: center;
+    margin: 0 auto 10px;
+    position: relative;
+    font-size: 2em;
+    line-height: 60px;
+    color: $gris;
+}
+.main-title::after{
+    content: "";
+    background: $naranja;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container-editor{
+    margin-top: 50px;
+}
+.editor__item{
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.editor__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.editor__circle{
+    width: 200px;
+    height: 200px;
+    border: 2px solid $clara;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -200px;
+    right: -150px ;
+    color: $clara;
+    padding: 20px;
+    padding-bottom: 70px;
+    padding-right: 50px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.editor__item:hover .editor__circle{
+    transform: scale(1.2);
+    bottom: -90px;
+    right: -50px;
+}
+.editor__item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $editor;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.editor__item:hover::before{
+    opacity: 1;
+}
+.container-tips{
+    margin: 20px 0;
+    text-align: center;
+}  
+.tip i{
+    font-size: 2em;
+}
+.tip__btn{
+    display: block;
+    border: 1px solid $naranja;
+    color:$negrav2;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 10px auto;
+    transition: all 0.5s;
+}
+.tip__btn:hover{
+    @include efectoboton;
 }

@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "inconsolata";
+    src: url(../fonts/Inconsolata-Regular.ttf);
+}
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "robo";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+$colores:(
+    clara:#fff,
+    gris:#555,
+    oscura:#454546,
+    tomate: tomato,
+    naranja: #ff4e00,
+    negra:#212121,
+    negrav2: #151515,
+    rojo: #ff0000,
+    rosa: #ffefd6,
+    slider: #00000080,
+    editor: #ffffff33,
+);
+$clara: map-get($colores,clara);
+$gris: map-get($colores,gris);
+$oscura: map-get($colores,oscura);
+$tomate: map-get($colores,tomate );
+$naranja: map-get($colores,naranja );
+$negra: map-get($colores,negra);
+$negrav2: map-get($colores,negrav2);
+$rojo: map-get($colores,rojo );
+$rosa: map-get($colores ,rosa);
+$slider: map-get($colores , slider );
+$editor: map-get($colores , editor );
+
+@mixin  product {
+    border: 4px solid $oscura;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s;
+    
+};
+@mixin new {
+    content: "New";
+    background: $naranja;
+    padding: 10px;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: rotate(-90deg);
+    color: $clara;
+};
+@mixin grilla {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 9px;
+};
+@mixin efectoboton {
+    color: $clara;
+    font-weight: bold;
+    background: $naranja
+}
+@mixin animacion {
+    animation-duration: 5s;
+    animation-name: aparecer;
+    animation-iteration-count: initial;    
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+    }
+}

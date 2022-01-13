@@ -1,56 +1,168 @@
-$fonts:(
-    clara:#f8f6f6,
-    gris:#d8bfd8,
-    oscura:#f5deb3,
-);
-$clara: map-get($fonts,clara);
-$gris: map-get($fonts,gris);
-$oscura: map-get($fonts,oscura);
-$borde_gris: #949494;
-$bg:(
-    rojo: #ff0000,
-    negra: #000000,
-    blanca: #ffffff,
-    violeta: #ee82ee,
-    rosa: #ffc2cc,
-    amarilla: #ffff00,
-    oscuro: #2d3e50,
-);
-$rojo: map-get($bg,rojo);
-$negra: map-get($bg,negra);
-$blanca: map-get($bg,blanca);
-$violeta: map-get($bg,violeta);
-$rosa: map-get($bg,rosa);
-$oscuro: map-get($bg,oscuro);
-$amarilla: map-get($bg,amarilla);
-@mixin cajas ($bgcaja, $color) {
-    width: 90%;
-    padding: 15px 0;
-    margin-bottom: 20px;
-    margin-left: 5px;
-    background: $bgcaja;
-    grid-area: categoriadelproducto;
-    text-align: center;
-    text-decoration: none;
-    color: $color;
-}
-$duracion:(
-    uno: 1.5,
-    tres: 3s,
-    cuatro: 4s,
-    cautrov2: 4.5s,
-);
-$uno: map-get($duracion,uno);
-$tres: map-get($duracion,tres);
-$cuatro: map-get($duracion,cuatro);
-$cuatrov2: map-get($duracion,cautrov2);
-
-@mixin animation ($duracion) {
-    animation-duration: $duracion;
-    animation-name: aparecer;
-    animation-iteration-count: initial;
-};
+@import "variantes";
 @import "body";
 @import "main";
 @import "header";
 @import "footer";
+@import "contacto";
+@import "slider";
+@import "productos";
+
+@media screen and (min-width:768px) {
+    .slider{
+        height: 400px;
+    }
+    .container-products{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .editor__item{
+        height: 280px;
+    }
+    .main-title{
+        font-size: 2em;
+    }
+    .main-title::after{
+        width: 160px;
+    }
+    .oferta{
+        max-height: 800px;
+    }
+    .oferta img{
+        height: 450px;
+        width: 600px;
+    }
+    .icone-menu{
+        align-items: left;
+        margin-right: 0px;
+    }
+    .product__description{
+        font-size: 1em;
+    }
+    .product::before{
+        font-size: 0.8em;
+    }
+    .product__price{
+        font-size: 0.7em;
+    }
+    .col-2{
+        font-size: 0.8em;
+    }
+    .main-header__title{
+        margin-right: -50px;
+    }
+    .menu__link{
+        font-size: 1em;
+    }
+    .main-header__txt{
+        font-size: 1em;
+        margin: 0;
+    }
+    .main-header__btn{
+        margin: 0;
+    }
+    .search{
+        margin-left: 0px;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+    .icon-menu{
+        display: none;
+        margin: 0;
+    }
+    .editor__item{
+        height: 350px;
+    }
+    .main-header__title{ 
+        margin: 0px;
+        padding: 0;
+        width: 40%;
+        font-size: 4em;
+        border-bottom: 2px solid #999;
+    }
+    .container-slider{
+        max-width: none;
+        height: 450px;
+    }
+    .slider{
+        height: 450px;
+    }
+    .slider__title{
+        font-size: 2em;
+    }
+    .slider__txt{
+        font-size: 1.5em;
+    }
+    .slider__link{
+        font-size: 1em;
+    }
+    .main-header .container--flex{
+        display: flex;
+        padding: 0;
+        align-items: center;
+    }
+    .main-header__container{
+        padding: 10px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-evenly;
+    }
+    .main-header__container:nth-child(2){
+        order:-1;
+    }
+    .main-nav{
+        width: 80%;
+        margin-top: 20px;
+    }
+    .menu{
+        display: flex;
+        margin: 0px;
+        position: static;
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+        background: none;
+    }
+    .search{
+        margin-left: 0;
+    }
+    .menu__link{
+        color: #333;
+        margin: 0;
+    }
+    .main-header__input{
+        width: 60%;
+    }
+    .menu__link:hover{
+        color: black;
+        font-weight: bold;
+    }
+    .call{
+        margin: right -150px;;
+    }
+    .hide{
+        visibility: visible;
+    }
+    .main-header__txt{
+        visibility: hidden;
+    }
+    .main-header__btn{
+        margin-left: 0;
+        font-size: 1.2em;
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .col-2{
+        flex-basis: 50%;
+        min-width: 300px;
+        font-size: 1em;
+    }
+    .oferta{
+        height: 600px;
+    }
+}

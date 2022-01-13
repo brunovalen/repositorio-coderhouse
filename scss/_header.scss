@@ -1,59 +1,75 @@
-
-header{
-        text-align: center;
-        @include animation ($uno);
-        grid-area: logo;
-        align-items: center;
-    h1{
-        nav{
-            grid-area: nav;
-            .menu{
-                padding: 30px;
-                list-style: none;
-                width: 90%;
-                margin: 20px auto;
-                text-align: center;
-                @include animation ($tres);
-                li{
-                    display: inline-block;
-                    text-align: center;
-                    a{
-                        text-decoration: none;
-                        font-size: 200%;
-                        display: inline;
-                        padding: 20px;
-                        color: $clara;
-                        &:hover{
-                            text-decoration: $clara;
-                            font-weight: bold;
-                        }
-                    }
-                }
-            }
-        }
-    }
+.main-header{
+    pad: 0 20px;
+    color: #454546;
+}
+.main-header__title{
+    text-align: center;
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #454546;
+    font-family: "poppins";
+}
+.hide{
+    visibility: hidden;
+}
+.menu{
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    background: #212121;
+    width: 80%;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.menu__item{
+    padding: 5px;
+    text-align: center;
+    width: 150px;
+    margin: auto;
 }
 
-@keyframes aparecer {
-    0%{
-        opacity: 0; 
-    }
-    50%{
-        opacity: 0.1;
-    }
-    65%{
-        opacity: 0.2;
-    }
-    75%{
-        opacity: 0.3;
-    }
-    80%{
-        opacity: 0.4;
-    }
-    85%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 1;
-    }
+.menu__link{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
+.mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-header__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+}
+.icon-menu{
+    font-size: 1.5em;
+    border: 3px solid #454546;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: -26%;
+}
+.main-header__btn{
+    display: block;
+    padding: 5px;
+    color: #454546;
+    text-decoration: none;
+}
+.main-header__input{
+    display: block;
+    padding: 5px;
+    width: 50%px;
+}
+.search{
+    margin-right: 15px;
 }
