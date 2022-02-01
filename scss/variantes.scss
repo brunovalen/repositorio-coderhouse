@@ -65,7 +65,7 @@ $editor: map-get($colores , editor );
     background: $naranja
 }
 @mixin animacion {
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-name: aparecer;
     animation-iteration-count: initial;    
 }

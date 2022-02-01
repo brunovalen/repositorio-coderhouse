@@ -23,6 +23,9 @@
     .main-title::after{
         width: 160px;
     }
+    .columna{
+        grid-template-columns: repeat(3,1fr);
+    }
     .oferta{
         max-height: 800px;
     }

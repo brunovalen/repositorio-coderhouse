@@ -90,3 +90,32 @@
 .tip__btn:hover{
     @include efectoboton;
 }
+
+.testimonial{
+    padding-top: 30px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+
+}
+.fa.fa-quote-left{
+    font-size: 30px;
+    color:  $naranja
+}
+.columna{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}

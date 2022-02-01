@@ -1,12 +1,12 @@
 .main-header{
     pad: 0 20px;
-    color:  $clara
+    color:  $oscura
 }
 .main-header__title{
     text-align: center;
     font-size: 2.5em;
     margin: 10px 0;
-    color: $clara;
+    color: $oscura;
     font-family: "poppins";
 }
 .hide{
@@ -53,7 +53,7 @@
 }
 .icon-menu{
     font-size: 1.5em;
-    border: 3px solid $clara;
+    border: 3px solid $oscura;
     display: block;
     padding: 10px 20px;
     cursor: pointer;
